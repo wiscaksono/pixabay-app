@@ -43,7 +43,7 @@ export default function Card({ data }) {
             {data.user}
           </span>
         </div>
-        <div className="flex items-center gap-2 font-medium text-slate-400 text-sm justify-around md:justify-end w-full">
+        <div className="flex items-center gap-2 font-medium text-slate-400 text-sm justify-around md:justify-end w-full md:w-auto">
           <div className="inline-flex gap-2 items-center">
             <span>{data.comments}</span>
             <ChatBubbleLeftEllipsisIcon className="w-4 h-4" />
