@@ -36,7 +36,7 @@ export default function Card({ data }) {
                 ? data.userImageURL
                 : "default-profile-image.jpg"
             }
-            className="w-7 h-7 rounded-full bg-fuchsia-500"
+            className="w-7 h-7 rounded-full bg-slate-400"
             alt={data.user}
           />
           <span className="text-sm font-semibold text-slate-700 truncate">
