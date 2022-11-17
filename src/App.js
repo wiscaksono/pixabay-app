@@ -32,7 +32,6 @@ export default function App() {
 
   useEffect(() => {
     getDataFromAPI();
-    get();
   }, [category, searchQuerry]);
 
   return (
