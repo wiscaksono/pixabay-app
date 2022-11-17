@@ -16,13 +16,6 @@ export default function App() {
   const [data, setData] = useState();
   const [category, setCategory] = useState();
   const [searchQuerry, setSearchQuerry] = useState();
-  async function get() {
-    let obj = await (
-      await fetch("http://feriirawan-api.herokuapp.com/list/bmkg/")
-    ).json();
-
-    return obj;
-  }
 
   async function getDataFromAPI() {
     await axios
