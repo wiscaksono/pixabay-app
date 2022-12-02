@@ -6,9 +6,15 @@ export default function Header({ setSearchQuerry }) {
     <header className="bg-slate-100">
       <div className="max-w-7xl mx-auto py-10 px-5">
         <div className="mb-5">
-          <a className="text-indigo-500 text-2xl font-semibold" href="/">
-            Pixabay <span className="font-normal text-slate-500">App</span>
-          </a>
+          <h1 className="mb-2.5">
+            <a className="text-indigo-500 text-2xl font-semibold" href="/">
+              Pixabay <span className="font-normal text-slate-500">App</span>
+            </a>
+          </h1>
+          <p className="text-slate-500">
+            The best free stock photos, royalty free images & videos shared by
+            creators.
+          </p>
         </div>
         <div className="flex items-center justify-center">
           <div className="relative flex-1">
