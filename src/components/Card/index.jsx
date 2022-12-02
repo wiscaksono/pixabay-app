@@ -4,12 +4,18 @@ import {
   EyeIcon,
   HeartIcon,
 } from "@heroicons/react/24/solid";
-import Devider from "./components/Basic/Devider";
+import Devider from "../Basic/Devider";
+import { useNavigate } from "react-router-dom";
 
 export default function Card({ data }) {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <div className="aspect-video relative">
+      <button
+        className="aspect-video relative"
+        onClick={() => navigate(`/photo/${data.id}`, { replace: true })}
+      >
         <div className="w-full h-full group relative rounded-xl overflow-hidden hover:scale-[1.01] hover:shadow-md transition-transform">
           <img
             src={data.webformatURL}
@@ -27,9 +33,14 @@ export default function Card({ data }) {
             </div>
           </div>
         </div>
-      </div>
+      </button>
       <div className="flex items-center justify-between mt-2.5 gap-2 flex-wrap">
-        <div className="flex items-center gap-1.5">
+        <a
+          href={`https://pixabay.com/users/${data.user}-${data.user_id}`}
+          target="_blank"
+          className="flex items-center gap-1.5"
+          rel="noreferrer"
+        >
           <img
             src={
               data.userImageURL
@@ -42,7 +53,7 @@ export default function Card({ data }) {
           <span className="text-sm font-semibold text-slate-700 truncate">
             {data.user}
           </span>
-        </div>
+        </a>
         <div className="flex items-center gap-2 font-medium text-slate-400 text-sm justify-around md:justify-end w-full md:w-auto">
           <div className="inline-flex gap-2 items-center">
             <span>{data.comments}</span>

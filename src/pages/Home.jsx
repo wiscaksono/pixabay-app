@@ -1,18 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import axios from "axios";
-import { useState, useEffect, lazy, Suspense } from "react";
-import SkeletonLoader from "./components/SkeletonLoader";
-import Footer from "./components/Layouts/Footer";
-import Header from "./components/Layouts/Header";
-import Navbar from "./components/Layouts/Navbar";
+import { lazy, Suspense, useEffect, useState } from "react";
+import Footer from "../components/Layouts/Footer";
+import Header from "../components/Layouts/Header";
+import Navbar from "../components/Layouts/Navbar";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 const Card = lazy(
   () =>
-    new Promise((resolve) => setTimeout(() => resolve(import("./Card")), 1000))
+    new Promise((resolve) =>
+      setTimeout(() => resolve(import("../components/Card")), 1000)
+    )
 );
 
-export default function App() {
+export default function Home() {
   const [data, setData] = useState();
   const [category, setCategory] = useState();
   const [searchQuerry, setSearchQuerry] = useState();

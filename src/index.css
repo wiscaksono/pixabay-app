@@ -14,8 +14,7 @@
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    user-select: none; /* Non-prefixed version, currently */
   }
 }
 
@@ -26,5 +25,13 @@
 
   .inactive {
     @apply font-normal text-slate-400;
+  }
+
+  .landscape {
+    @apply aspect-video object-cover h-[60%] w-full;
+  }
+
+  .portrait {
+    @apply h-full w-1/2 object-cover;
   }
 }
